@@ -27,16 +27,16 @@
 
 \vspace{15mm}
 \begin{minipage}[t]{0.55\textwidth}
-	{\large{Relatore:}{\vspace{1mm} \\
+	{\large{\theRelatore{}:}{\vspace{1mm} \\
   {\setstretch{1}\large\bf\@manylines{\Relatore}\par}}}
   \ifx\Correlatore\empty\else{
-   \vspace{5mm} \large{Correlatore:}{\vspace{1mm} \\
+   \vspace{5mm} \large{\theCorrelatore{}:}{\vspace{1mm} \\
   {\setstretch{1}\large\bf\@manylines{\Correlatore}\par}}
   }\fi
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.39\textwidth}\raggedleft
-	{\large{Candidato:}{\vspace{1mm} \\
+	{\large{\theCandidato{}:}{\vspace{1mm} \\
   {\setstretch{1}\large\bf\@manylines{\Candidato}\par}}}
 \end{minipage}
 

@@ -7,11 +7,18 @@
 
 % nota: la classe tesina include già i seguenti pacchetti:
 %   babel, fontenc, graphicx, inputenc, setspace
+% generalmente non servirà toglierli o modificarli
 
 % opzioni per babel: italian, english
 \documentclass[italian]{tesina-class/tesina}
 % csquotes: virgolettati (\enquote{})
 \usepackage[italian=quotes,english=american]{csquotes}
+% link interni ed esterni
+\usepackage{hyperref}
+% gestione della bibliografia e dei riferimenti
+\usepackage[style=numeric, backend=biber]{biblatex}
+
+\addbibresource{bibliography.bib}
 
 % istituzione (obbligatorio)
 \renewcommand{\Istituzione}{Università degli Studi di Udine}
@@ -38,6 +45,7 @@
 %\renewcommand{\Correlatore}{Dott. Correlatore 1 \and Dott. Correlatore 2}
 % anno accademico (obbligatorio)
 \renewcommand{\AnnoAccademico}{Anno Accademico 2026/2027}
+
 
 
 \begin{document}
@@ -87,5 +95,22 @@ Con il comando \verb|\AnnoAccademico| si può impostare ciò che viene scritto i
 
 L'immagine predefinita è il logo dell'Università di Udine.
 Per cambiarlo bisogna agire sul file \verb|firstpage.cls| cambiando il percorso file con quello dell'immagine desiderata; nel caso non sappiate farlo, \emph{rangjaisi}.
+
+\section{Pacchetti generali}
+
+Descrizioni sintetiche dei pacchetti di uso comune inclusi di default.
+
+\subsection{Pacchetto \texttt{biblatex}}
+
+\verb|biblatex| è fondamentale per la bibliografia.
+Viene già incluso in questa classe con le seguenti opzioni: \texttt{style=numeric}, \texttt{backend=biber}.
+Le citazioni appaiono così: \autocite{scrivere_una_tesina}.
+
+
+
+
+
+\newpage
+\printbibliography
 
 \end{document}
