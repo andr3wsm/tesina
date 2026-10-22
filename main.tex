@@ -5,20 +5,37 @@
 %                             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+% CLASSE TESINA
+
 % nota: la classe tesina include già i seguenti pacchetti:
 %   babel, fontenc, graphicx, inputenc, setspace
 % generalmente non servirà toglierli o modificarli
 
 % opzioni per babel: italian, english
 \documentclass[italian]{tesina-class/tesina}
+
+
+% PACCHETTI GENERALI
+
 % csquotes: virgolettati (\enquote{})
 \usepackage[italian=quotes,english=american]{csquotes}
 % link interni ed esterni
 \usepackage{hyperref}
 % gestione della bibliografia e dei riferimenti
 \usepackage[style=numeric, backend=biber]{biblatex}
+\addbibresource{bibliography.bib} % file dei riferimenti bibliografici
 
-\addbibresource{bibliography.bib}
+
+% PACCHETTI MATEMATICI
+
+% ambienti equation, align etc
+\usepackage{amsmath}
+% notazione
+\usepackage{amssymb}
+% notazione
+\usepackage{xfrac}
+
 
 % istituzione (obbligatorio)
 \renewcommand{\Istituzione}{Università degli Studi di Udine}
@@ -68,6 +85,8 @@ Questo è un modello \LaTeX{} per una tesina della Scuola Superiore, semplice ma
 
 
 \newpage
+% pagine numerate a partire da dopo l'indice
+\pagenumbering{arabic}
 
 \section{Introduzione}
 
@@ -96,17 +115,50 @@ Con il comando \verb|\AnnoAccademico| si può impostare ciò che viene scritto i
 L'immagine predefinita è il logo dell'Università di Udine.
 Per cambiarlo bisogna agire sul file \verb|firstpage.cls| cambiando il percorso file con quello dell'immagine desiderata; nel caso non sappiate farlo, \emph{rangjaisi}.
 
+
+
+
+
 \section{Pacchetti generali}
 
 Descrizioni sintetiche dei pacchetti di uso comune inclusi di default.
+Per una documentazione completa fate riferimento a quelle dei singoli pacchetti.
 
-\subsection{Pacchetto \texttt{biblatex}}
+\subsection{\texttt{csquotes}}
+
+\verb|csquotes| serve per formattare correttamente i virgolettati (comando \verb|\enquote|) in modo che \enquote{si chiudano bene}.
+
+\subsection{\texttt{hyperref}}
+
+\verb|hyperref| crea dei veri e propri link.
+Vengono applicati in automatico a: rimandi nell'indice, rimandi alla bibliografia, note a piè di pagina. Si possono aggiungere link a siti web con \verb|\url|.
+
+\subsection{\texttt{biblatex}}
 
 \verb|biblatex| è fondamentale per la bibliografia.
 Viene già incluso in questa classe con le seguenti opzioni: \texttt{style=numeric}, \texttt{backend=biber}.
 Le citazioni appaiono così: \autocite{scrivere_una_tesina}.
 
 
+
+\section{Pacchetti matematici}
+
+In realtà anche questi sono di uso abbastanza ampio, utili in tutte le branche della scienza.
+
+\subsection{\texttt{amsmath}}
+
+\verb|amsmath| introduce ambienti per formule matematiche, in particolare \verb|equation|, \verb|align|, \verb|multiline|, \verb|split|.
+C'è una gestione automatizzata delle equazioni numerate.
+Oltre a questo, \verb|amsmath| introduce elementi di notazione matematica utili come \verb|\frac|, funzioni trigonometriche, sommatorie, integrali e operatori vari.
+Sono importanti anche i font come \verb|\mathbb| ($\mathbb{R}$ etc.) e \verb|\mathcal| ($\mathcal{C}$ etc.).
+
+\subsection{\texttt{amssymb}}
+
+\verb|amssymb| aggiunge altra notazione matematica utile.
+
+\subsection{\texttt{xfrac}}
+
+\verb|xfrac| aggiunge le frazioni con notazione \enquote{inclinata} ($\sfrac{x}{y}$).
 
 
 
