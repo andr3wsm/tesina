@@ -47,7 +47,7 @@
 
 % sommario
 \begin{abstract}
-Questo è un modello \LaTeX per una tesina della Scuola Superiore, semplice ma allo stesso tempo completo, riutilizzabile e adattabile.
+Questo è un modello \LaTeX{} per una tesina della Scuola Superiore, semplice ma allo stesso tempo completo, riutilizzabile e adattabile.
 È mirato a studenti di materie scientifiche, in particolar modo matematica e informatica, ma smanettando un po' si adatta a tutti.
 \end{abstract}
 
@@ -62,5 +62,30 @@ Questo è un modello \LaTeX per una tesina della Scuola Superiore, semplice ma a
 \newpage
 
 \section{Introduzione}
+
+Se questa repository o questo modello vi sono capitati tra le mani è probabile che vogliate scrivere una tesina\footnote{
+    Altrimenti detta prova finale perché è l'esame finale di ogni anno nella Scuola Superiore Universitaria \enquote{Di Toppo-Wassermann} dell'Università degli Studi di Udine.
+    Nulla vieta di usare questo modello per la \enquote{tesina di marzo} (prova intermedia), né per tesi, tesine o elaborati vari di altre istituzioni.
+} e siate studenti di un corso scientifico, specialmente matematica e informatica.
+Prevedendo questo uso i pacchetti predefiniti che accompagnano la classe \texttt{tesina} cercano di supportare i bisogni specifici di questi corsi di studi.
+È sempre possibile aggiungere nuovi pacchetti \LaTeX{} ogni qual volta che si renda necessario.
+
+Questo documento di esempio ha contemporaneamente lo scopo di fornire una classe \LaTeX{} per le tesine e di documentare la classe stessa.
+Si assume un minimo di conoscenza del funzionamento elementare di \LaTeX{}, che se dovesse mancare si può sempre recuperare nei tutorial di Overleaf\footnote{
+    A meno di variazioni dell'URL: \url{https://www.overleaf.com/learn}.
+}
+
+\subsection{Frontespizio}
+
+Tutti gli elementi importanti del frontespizio sono modificabili agendo sui \verb|\renewcommand| del preambolo.
+Con i comandi \verb|\Istituzione|, \verb|\Dipartimento| e \verb|\CorsoDiLaurea| (gli ultimi due facoltativi) si aggiustano le righe in alto.
+Con \verb|\Titolo| si inserisce il titolo; sia il titolo sia ciò che c'è scritto sopra possono essere spezzati su più righe.
+
+I comandi \verb|\Candidato|, \verb|\Relatore| e \verb|Correlatore| sono altrettanto autoesplicativi, notando che si possono inserire più nomi per ognuno di essi separandoli con il comando \verb|\and| per andare a capo (materialmente può avere senso solo nel caso dei correlatori).
+Se il comando \verb|\Correlatore| è definito vuoto allora non viene mostrato nulla; gli altri due sono obbligatori.
+Con il comando \verb|\AnnoAccademico| si può impostare ciò che viene scritto in fondo alla pagina.
+
+L'immagine predefinita è il logo dell'Università di Udine.
+Per cambiarlo bisogna agire sul file \verb|firstpage.cls| cambiando il percorso file con quello dell'immagine desiderata; nel caso non sappiate farlo, \emph{rangjaisi}.
 
 \end{document}

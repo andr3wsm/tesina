@@ -22,6 +22,8 @@
 \RequirePackage[T1]{fontenc}
 % supporto unicode
 \RequirePackage[utf8]{inputenc}
+% link interni ed esterni
+\RequirePackage{hyperref}
 
 \newcommand{\Istituzione}{Istituzione}
 \newcommand{\Dipartimento}{Dipartimento}
