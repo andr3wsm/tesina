@@ -1,0 +1,65 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                             %
+%      TEMPLATE "TESINA"      %
+%       Andrea Salvador       %
+%                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% nota: la classe tesina include già i seguenti pacchetti:
+%   babel, fontenc, graphicx, inputenc, setspace
+
+% opzioni per babel: italian, english
+\documentclass[italian]{tesina}
+% csquotes: virgolettati (\enquote{})
+\usepackage[italian=quotes,english=american]{csquotes}
+
+% istituzione (obbligatorio)
+\renewcommand{\Istituzione}{Università degli Studi di Udine}
+% dipartimento (facoltativo)
+\renewcommand{\Dipartimento}{Scuola Superiore Universitaria \\ \enquote{Di Toppo-Wassermann}}
+% altrimenti
+%\renewcommand{\Dipartimento}{}
+% corso di studi (facoltativo)
+\renewcommand{\CorsoDiStudi}{}
+% altrimenti
+%\renewcommand{\CorsoDiStudi}{Laurea in \LaTeX}
+
+% titolo
+\renewcommand{\Titolo}{Titolo della tesina \\ anche \\ su \\ più \\ righe}
+
+% in tutti i campi: se ci sono più persone separare con \and
+% candidato (obbligatorio)
+\renewcommand{\Candidato}{Candidato}
+% relatore (obbligatorio)
+\renewcommand{\Relatore}{Prof. Relatore}
+% lasciare così se non ci sono correlatori
+\renewcommand{\Correlatore}{}
+% altrimenti
+%\renewcommand{\Correlatore}{Dott. Correlatore 1 \and Dott. Correlatore 2}
+% anno accademico (obbligatorio)
+\renewcommand{\AnnoAccademico}{Anno Accademico 2026/2027}
+
+
+\begin{document}
+
+% frontespizio
+\maketitle
+
+% sommario
+\begin{abstract}
+Questo è un modello \LaTeX per una tesina della Scuola Superiore, semplice ma allo stesso tempo completo, riutilizzabile e adattabile.
+È mirato a studenti di materie scientifiche, in particolar modo matematica e informatica, ma smanettando un po' si adatta a tutti.
+\end{abstract}
+
+%eventualmente in una nuova pagina
+%\newpage
+
+% indice
+\tableofcontents
+
+
+\newpage
+
+\section{Introduzione}
+
+\end{document}
