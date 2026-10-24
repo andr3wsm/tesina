@@ -33,6 +33,20 @@
 \usepackage{amsmath}
 % notazione
 \usepackage{amssymb}
+% teoremi
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{definition}{Definizione}[section] % da correggere se si usa in inglese
+% l'argomento opzionale [definition] indica che seguono la stessa numerazione
+\newtheorem{notation}[definition]{Notazione}
+% altrimenti:
+% \newtheorem*{notation}{Notazione}
+\newtheorem{remark}[definition]{Osservazione}
+\theoremstyle{plain}
+\newtheorem{theorem}[definition]{Teorema}
+\newtheorem{lemma}[definition]{Lemma}
+\newtheorem{corollary}[definition]{Corollario}
+\newtheorem{proposition}[definition]{Proposizione}
 % notazione
 \usepackage{xfrac}
 
@@ -155,6 +169,54 @@ Sono importanti anche i font come \verb|\mathbb| ($\mathbb{R}$ etc.) e \verb|\ma
 \subsection{\texttt{amssymb}}
 
 \verb|amssymb| aggiunge altra notazione matematica utile.
+
+\subsection{\texttt{amsthm}}
+
+\verb|amsthm| aggiunge comandi per definire ambienti come teoremi, definizioni, dimostrazioni e simili.
+Il preambolo dichiara questi ambienti: \verb|theorem|, \verb|lemma|, \verb|proposition| con lo stile \verb|plain|; \verb|definition|, \verb|notation|, \verb|remark| (\enquote{osservazione}) con lo stile \verb|definition|.
+Tutti questi ambienti seguono un'unica numerazione progressiva che riparte da x.1 ad ogni sezione.
+Se si preferisce avere un ambiente \verb|notation| senza numerazione è sufficiente cambiare il comando come mostrato nel preambolo.
+
+\begin{definition}[Verità]
+    È vero ciò che non è falso.
+\end{definition}
+
+\begin{lemma}
+Ciò che è vero è vero.
+\end{lemma}
+\begin{proof}
+Supponiamo che sia falso, questo implica che allo stesso tempo sia vero e ciò è assurdo.
+\end{proof}
+
+\begin{notation}
+Con $A\overset{\triangle}{B}C$ indichiamo un triangolo di vertici $A$, $B$, $C$.
+\end{notation}
+
+\begin{theorem}
+Sia $A\overset{\triangle}{B}C$ un triangolo rettangolo di ipotenusa $AC$. Si ha che
+\begin{equation*}
+\overline{AB}^2 + \overline{BC}^2 = \overline{AC}^2.
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Si trova facilmente in letteratura.
+\end{proof}
+
+\begin{corollary}
+Sia $A\overset{\triangle}{B}C$ un triangolo rettangolo di ipotenusa $AC$. Vale
+\begin{equation*}
+\overline{AC} > \max \{ \overline{AB}, \overline{BC} \}.
+\end{equation*}
+\end{corollary}
+
+\begin{proposition}
+    Non esiste un massimo numero primo.
+\end{proposition}
+
+\begin{remark}
+    Da calcoli elementari si ottiene che
+    $1 - 2 \not= 3$.
+\end{remark}
 
 \subsection{\texttt{xfrac}}
 
